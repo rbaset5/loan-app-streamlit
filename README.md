@@ -1,1 +1,1 @@
-# loan-app-streamlit
+# Template for Machine Learning projects
