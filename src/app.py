@@ -1,7 +1,12 @@
 from pickle import load
 import streamlit as st
+import os
 
-model = load(open("../models/decision_tree_classifier_default_42.sav", "rb"))
+if os.path.isfile("/workspaces/machine-learning-python-template-ds-2023/src/decision_tree_classifier_default_4.sav"):
+    modelDir = "/workspaces/machine-learning-python-template-ds-2023/src/decision_tree_classifier_default_4.sav"
+else:
+    modelDir = "./decision_tree_classifier_default_4.sav"
+model = load(open(modelDir, "rb"))
 class_dict = {
     "0": "Iris setosa",
     "1": "Iris versicolor",
